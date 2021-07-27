@@ -1,0 +1,285 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* @media screen and (max-width: 612px) {
+  html {
+    font-size: 14px;
+  }
+} */
+
+@media screen and (max-width: 440px) {
+  html {
+    font-size: 14px;
+  }
+}
+
+/* ########################## */
+/*       Budget Section       */
+/* ########################## */
+
+.budget {
+  height: 550px;
+  background-color: rgb(63, 63, 63);
+  color: white;
+  font-family: Open Sans, sans-serif;
+  font-weight: 100;
+}
+
+.budget__title {
+  font-size: 3rem;
+  text-align: center;
+  padding-top: 60px;
+  margin-bottom: 30px;
+}
+
+.budget__text {
+  font-size: 1.5rem;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.budget__value {
+  font-size: 4rem;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.budget__income,
+.budget__expenses {
+  width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  border-radius: 5px;
+}
+
+.budget__income {
+  background-color: #28b9b5;
+  margin-bottom: 10px;
+}
+
+.budget__expenses {
+  background-color: #ff5049;
+}
+
+@media screen and (max-width: 440px) {
+  .budget__income,
+  .budget__expenses {
+    width: 90%;
+  }
+}
+
+/* ########################## */
+/*       Input Section        */
+/* ########################## */
+
+.input {
+  border-bottom: 1px solid #e7e7e7;
+  background-color: #f7f7f7;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 30px;
+  font-family: Open Sans, sans-serif;
+}
+
+.input__type,
+.input__desc,
+.input__value,
+.input__btn {
+  height: 50px;
+  font-size: 1.125rem;
+  margin-right: 10px;
+  padding: 10px;
+  border: 1px solid #929191;
+  border-radius: 5px;
+  flex-shrink: 1;
+}
+
+.input__type:focus,
+.input__desc:focus,
+.input__value:focus,
+.input__btn:focus {
+  outline: none;
+  border: 2px solid #28b9b5;
+}
+
+.input__type {
+  width: 60px;
+}
+
+.input__desc {
+  width: 300px;
+}
+
+.input__value {
+  width: 100px;
+}
+
+.input__btn {
+  background: none;
+  border: none;
+  font-size: 2rem;
+  color: #28b9b5;
+}
+.input__btn:hover {
+  cursor: pointer;
+}
+.input__btn:active {
+  transform: translateY(3px);
+}
+
+.red {
+  color: #ff5049 !important;
+}
+.red-focus:focus {
+  border: 2px solid #ff5049 !important;
+}
+
+@media screen and (max-width: 612px) {
+  .input {
+    padding-top: 20px;
+  }
+
+  .input__type,
+  .input__desc,
+  .input__value,
+  .input__btn {
+    margin-top: 10px;
+  }
+
+  .input__desc,
+  .input__value {
+    flex-shrink: 1;
+    width: 70%;
+  }
+
+  .input__type,
+  .input__btn {
+    flex-shrink: 1;
+    width: 20%;
+  }
+}
+
+@media screen and (max-width: 440px) {
+  .input__desc,
+  .input__value {
+    width: 60%;
+  }
+}
+
+/* ########################## */
+/*       Content Section      */
+/* ########################## */
+
+.content {
+  display: flex;
+  justify-content: center;
+  font-family: Open Sans, sans-serif;
+}
+
+.income,
+.expenses {
+  width: 400px;
+  text-align: center;
+  font-weight: 600;
+  margin: 0 10px;
+}
+
+.income {
+  color: #28b9b5;
+}
+
+.expenses {
+  color: #ff5049;
+}
+
+.income__title,
+.expenses__title {
+  padding: 25px;
+  font-size: 1.25rem;
+}
+
+.income__list,
+.expenses__list {
+  display: flex;
+  flex-direction: column;
+}
+
+.item {
+  display: flex;
+  padding: 15px;
+  color: white;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  font-weight: 400;
+  transition: box-shadow 0.3s, transform 0.3s;
+}
+
+.income .item {
+  background-color: #28b9b5;
+}
+.expenses .item {
+  background-color: #ff5049;
+}
+
+.item__desc {
+  flex-grow: 1;
+  text-align: left;
+}
+
+.item__value {
+  transition: flex 0.3s;
+}
+
+.item__delete--btn {
+  background: none;
+  border: none;
+  color: white;
+  margin-left: 10px;
+  display: none;
+}
+.item__delete--btn:hover {
+  cursor: pointer;
+}
+.item__delete--btn:active {
+  transform: translateY(3px);
+}
+
+.item:hover .item__delete--btn {
+  display: inline-block;
+}
+
+.income .item:hover {
+  box-shadow: 3px 3px #20928c;
+  transform: translate(-2px, -2px);
+}
+
+.expenses .item:hover {
+  box-shadow: 3px 3px #bd3b36;
+  transform: translate(-2px, -2px);
+}
+
+@media screen and (max-width: 440px) {
+  .content {
+    flex-direction: column;
+  }
+
+  .expenses {
+    border-top: 1px solid #dbdbdb;
+  }
+
+  .income,
+  .expenses {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .item__delete--btn {
+    display: inline-block;
+  }
+}
